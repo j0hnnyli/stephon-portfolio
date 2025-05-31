@@ -7,8 +7,6 @@ import { twMerge } from 'tailwind-merge'
 import { CgChevronRight } from "react-icons/cg";
 import { featuredVideos } from '@/lib/content/videos'
 
-
-
 export default function FeaturedzVideos() {
   const middle = Math.floor(featuredVideos.length / 2);
   const [active, setActive] = useState(middle)
@@ -23,7 +21,7 @@ export default function FeaturedzVideos() {
       </h2>
 
       <div className="relative w-full h-[250px] md:h-[300px] flex justify-center items-center overflow-hidden">
-        {featuredVideos.map((video, i) => {
+        {featuredVideos.map(({src, poster}, i) => {
           const isActive = i === active
           const isPrev = i === active - 1
           const isNext = i === active + 1
@@ -34,16 +32,19 @@ export default function FeaturedzVideos() {
             <div
               key={i}
               className={twMerge(
-                "absolute transition-all duration-300 ease-in-out",
+                "absolute transition-all duration-300 ease-in-out w-[90%] md:w-[500px] h-auto",
                 isActive && "z-30 scale-110",
                 isPrev && "-translate-x-[280px] z-20 scale-90 -rotate-6",
                 isNext && "translate-x-[280px] z-20 scale-90 rotate-6"
               )}
             >
               <video
-                src={video}
+                src={src}
                 controls={isActive}
-                className="w-[80%] md:w-[500px] h-[250px] md:h-[300px] object-cover mx-auto"
+                playsInline
+                preload="metadata"
+                poster={poster}
+                className="w-full h-full object-cover mx-auto"
               />
             </div>
           )

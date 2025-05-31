@@ -5,11 +5,12 @@ import { FaTimes } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa6";
 
 type VideoCardProps = {
-  src: string
+  src: string;
+  poster : string;
 }
 
 
-export function VideoCard({ src }: VideoCardProps) {
+export function VideoCard({ src, poster }: VideoCardProps) {
     const [activeSrc, setActiveSrc] = useState<string | null>(null)
 
   return (
@@ -20,7 +21,8 @@ export function VideoCard({ src }: VideoCardProps) {
       >
         <video
           src={src}
-          preload="false"
+          playsInline
+          poster={poster}
           className="w-full h-full object-cover"
         />
 
@@ -43,6 +45,7 @@ export function VideoCard({ src }: VideoCardProps) {
             className="w-[90%] max-w-[750px] max-h-[500px]"
             controls
             autoPlay
+            playsInline
           />
         </div>
       )}
