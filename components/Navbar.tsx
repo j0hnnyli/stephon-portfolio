@@ -4,7 +4,7 @@ import { FaMicrophoneLines } from "react-icons/fa6";
 
 export default function Navbar(){
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[var(--primary-color)] text-white">
+    <nav className="hidden md:inline-block fixed top-0 w-full z-40 bg-[var(--primary-color)] text-white">
       <div className="max_width mx-auto p-5 flex items-center justify-between h-20 "> 
         <div className="autograf text-xl flex items-center gap-2">
           <FaMicrophoneLines className="text-white"/>
