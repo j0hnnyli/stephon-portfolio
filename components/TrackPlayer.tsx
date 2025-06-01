@@ -8,10 +8,9 @@ import { AnimateBars } from "./AnimateBars";
 import { useAudioPlayer } from "@/lib/hooks/useAudioPlayer";
 
 type TrackPlayerProps = {
-  audioSrc: string;
+  url: string;
   title: string;
 };
-
 let currentAudio: HTMLAudioElement | null = null;
 
 const formatTime = (durSecs: number) => {
@@ -20,7 +19,7 @@ const formatTime = (durSecs: number) => {
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 };
 
-export default function TrackPlayer({ audioSrc, title }: TrackPlayerProps) {
+export default function TrackPlayer({ url, title }: TrackPlayerProps) {
   const {
     audioRef,
     isPlaying,
@@ -30,7 +29,7 @@ export default function TrackPlayer({ audioSrc, title }: TrackPlayerProps) {
     pause,
     seek,
     restart,
-  } = useAudioPlayer(audioSrc);
+  } = useAudioPlayer(url);
 
   const handlePlay = () => {
     const audio = audioRef.current;
@@ -97,7 +96,7 @@ export default function TrackPlayer({ audioSrc, title }: TrackPlayerProps) {
           </div>
         </div>
 
-        <audio ref={audioRef} src={audioSrc} preload="metadata" />
+        <audio ref={audioRef} src={url} preload="metadata" />
       </div>
     </div>
   );
