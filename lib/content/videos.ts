@@ -1,31 +1,13 @@
 export const featuredVideos = [
-  {
-    src : '/videos/featured/video1.mp4',
-    poster : '/posters/video1poster.png'
-  },
-  {
-    src : '/videos/featured/video2.mp4',
-    poster : '/posters/video2poster.png'
-  },
-  {
-    src : '/videos/featured/video3.mp4',
-    poster : '/posters/video3poster.png'
-  },
+  'https://youtu.be/O_-44DvKLco',
+  'https://youtu.be/o9Leplin4Ko',
+  'https://youtu.be/Ot62mzC4a_s',
 ]
 
 
 export const allVideos = [
   ...featuredVideos,
-  {
-    src :  '/videos/video4.mp4',
-    poster : '/posters/video4poster.png'
-  },
-  {
-    src :  '/videos/video5.mp4',
-    poster : '/posters/video5poster.png'
-  },
-  {
-    src :  '/videos/video6.mp4',
-    poster : '/posters/video6poster.png'
-  },
+  'https://youtube.com/shorts/JGtmV6EdzO8',
+  'https://youtube.com/shorts/uUcJxSMqR0o',
+  'https://youtu.be/oAnl7sr2xDM',
 ]
