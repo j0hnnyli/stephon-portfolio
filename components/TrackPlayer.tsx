@@ -11,6 +11,7 @@ type TrackPlayerProps = {
   url: string;
   title: string;
 };
+
 let currentAudio: HTMLAudioElement | null = null;
 
 const formatTime = (durSecs: number) => {
@@ -56,13 +57,13 @@ export default function TrackPlayer({ url, title }: TrackPlayerProps) {
           alt="track cover"
           fill
           sizes="75"
-          className="object-cover rounded z-10"
+          className="object-cover rounded-xl z-10"
         />
         {isPlaying && currentAudio === audioRef.current && <AnimateBars />}
       </div>
 
       <div className="flex flex-col justify-between w-full">
-        <h2 className="font-[--font-playfair] text-xl">{title}</h2>
+        <h2 className="playfair text-xl">{title}</h2>
 
         <div className="flex items-center">
           {currentTime === duration && duration !== 0 ? (
@@ -88,7 +89,8 @@ export default function TrackPlayer({ url, title }: TrackPlayerProps) {
               onChange={handleSeek}
               className="w-[80%]"
             />
-            <div className="flex gap-1 text-xs">
+            
+            <div className="flex gap-[2px] text-xs w-[75px]">
               <span>{formatTime(currentTime)}</span>
               <span>/</span>
               <span>{formatTime(duration)}</span>

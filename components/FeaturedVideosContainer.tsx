@@ -34,7 +34,7 @@ export default function FeaturedVideosContainer({featuredVideos} : Props) {
             <div
               key={asset_id}
               className={twMerge(
-                "absolute transition-all duration-300  ease-in-out h-auto w-[90%] md:w-[500px]",
+                "absolute transition-all duration-300  ease-in-out h-auto w-full md:w-[500px]",
                 isActive && "z-30 scale-110",
                 isPrev && "-translate-x-[280px] z-20 scale-90 -rotate-6",
                 isNext && "translate-x-[280px] z-20 scale-90 rotate-6"
@@ -56,11 +56,11 @@ export default function FeaturedVideosContainer({featuredVideos} : Props) {
       <div className="flex flex-col items-center gap-10 mt-10">
         <div className="flex items-center gap-6">
           <button disabled={active === 0} onClick={prev}>
-            <FaChevronLeft className={twMerge('cursor-pointer', active === 0 && 'invisible')}/>
+            <FaChevronLeft className={twMerge('cursor-pointer text-2xl', active === 0 && 'invisible')}/>
           </button>
 
           <button disabled={active === featuredVideos.length - 1} onClick={next}>
-            <FaChevronRight className={twMerge('cursor-pointer', active === featuredVideos.length - 1 && 'invisible')}/>
+            <FaChevronRight className={twMerge('cursor-pointer text-2xl', active === featuredVideos.length - 1 && 'invisible')}/>
           </button>
         </div>
 

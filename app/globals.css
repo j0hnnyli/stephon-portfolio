@@ -3,13 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@font-face {
-  font-family: "Autograf";
-  src: url("/fonts/autograf-font/Autograf.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root{
   --primary-color : #0d0d0d;
   --radius: 0.625rem;
@@ -47,7 +40,11 @@
 }
 
 .autograf {
-  font-family: "Autograf", sans-serif;
+  font-family: var(--font-autoGraf)
+}
+
+.playfair{
+  font-family: var(--playfair-font);
 }
 
 .max_width{

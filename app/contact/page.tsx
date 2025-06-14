@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <div className="max_width mx-auto px-5 py-16 flex flex-col md:flex-row gap-5">
 
-      <div className="text-5xl font-[--font-playfair] tracking-widest italic font-bold w-full text-center md:text-left">
+      <div className="text-5xl playfair tracking-widest italic font-bold w-full text-center md:text-left">
         <h2>Contact Me</h2>
         <p className="text-lg">- Timeless & Pure -</p>
       </div>
@@ -22,7 +22,7 @@ export default function ContactPage() {
           <h2 className="text-2xl">Contact Infomation</h2>
 
           <div className="flex items-center mt-5 gap-5">
-            <div className="flex items-center justify-center p-3 rounded-2xl bg-slate-800">
+            <div className="flex items-center justify-center p-3 rounded-xl bg-slate-800">
               <IoMdMail className="text-3xl"/> 
             </div>
             <div>
@@ -32,7 +32,7 @@ export default function ContactPage() {
           </div>
           
           <div className="flex items-center mt-5 gap-5">
-            <div className="flex items-center justify-center p-3 rounded-2xl bg-slate-800">
+            <div className="flex items-center justify-center p-3 rounded-xl bg-slate-800">
               <FaPhoneAlt className="text-3xl"/> 
             </div>
             <div>
@@ -47,7 +47,7 @@ export default function ContactPage() {
 
           <div className="flex items-center mt-5 gap-5">
             <Link href="/" 
-              className="flex items-center justify-center p-3 rounded-2xl bg-slate-800 hover:bg-white hover:text-black"
+              className="flex items-center justify-center p-3 rounded-xl bg-slate-800 hover:bg-white hover:text-black"
             >
               <FaFacebookSquare className="text-3xl"/> 
             </Link>
@@ -57,7 +57,7 @@ export default function ContactPage() {
           
           <div className="flex items-center mt-5 gap-5">
             <Link href="/"  
-              className="flex items-center justify-center p-3 rounded-2xl bg-slate-800 hover:bg-white hover:text-black"
+              className="flex items-center justify-center p-3 rounded-xl bg-slate-800 hover:bg-white hover:text-black"
             >
               <FaInstagram className="text-3xl"/> 
             </Link>
@@ -66,7 +66,7 @@ export default function ContactPage() {
           
           <div className="flex items-center mt-5 gap-5">
             <Link href="/" 
-              className="flex items-center justify-center p-3 rounded-2xl bg-slate-800 hover:bg-white hover:text-black"
+              className="flex items-center justify-center p-3 rounded-xl bg-slate-800 hover:bg-white hover:text-black"
             >
               <FaXTwitter className="text-3xl"/> 
             </Link>

@@ -25,7 +25,7 @@ export default function Intro(){
           className=" relative z-20 h-full w-full"
         ></div>
 
-        <div className="absolute bottom-0 z-30 text-white w-full md:w-[50%] h-[50%] right-0 flex flex-col items-center justify-center text-5xl font-[--font-playfair] tracking-widest italic font-bold">
+        <div className="absolute bottom-0 z-30 text-white w-full md:w-[50%] h-[50%] right-0 flex flex-col items-center justify-center text-5xl playfair tracking-widest italic font-bold">
           <h2>STEPHON</h2>
           <h2>JONES</h2>
           <p className="text-lg"> - Singer  & Entertainer - </p>

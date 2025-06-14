@@ -13,7 +13,7 @@ export default async function BounsLiveTracks(){
 
   return (
     <section className="max_width mx-auto px-5">
-      <h2 className="text-5xl font-[--font-playfair] tracking-widest text-center"> Live Tracks</h2>
+      <h2 className="text-5xl playfair tracking-widest text-center"> Live Tracks</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-5 mt-10">
         {resources.map(({url, asset_id, context}) => (
