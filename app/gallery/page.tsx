@@ -35,9 +35,9 @@ export default function Gallery(){
         <TabsContent value="videos" className="w-full">
           <Suspense fallback={
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
-              <Skeleton className="rounded-xl h-[400px]"/>
-              <Skeleton className="rounded-xl h-[400px]" />
-              <Skeleton className="rounded-xl h-[400px]"/>
+              <Skeleton className="bg-gray-500 rounded-xl h-[400px]"/>
+              <Skeleton className="bg-gray-500 rounded-xl h-[400px]" />
+              <Skeleton className="bg-gray-500 rounded-xl h-[400px]"/>
             </div>
           }>
             <VideoDataComponent />
