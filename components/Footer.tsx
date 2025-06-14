@@ -8,7 +8,7 @@ export default function Footer(){
   return (
     <footer className="bg-[var(--primary-color)] text-white py-16 px-5 flex flex-col gap-5 justify-center items-center max_width mx-auto">
       <div className=" text-white text-center">
-        <h2 className="text-3xl md:text-4xl font-bold font-[--font-playfair] mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold playfair mb-4">
           Ready to Book a Show?
         </h2>
         <p className="text-lg mb-6">

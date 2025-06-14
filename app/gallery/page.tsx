@@ -1,15 +1,17 @@
-import VideoGallery from "./VideoGallery"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { BiSolidMoviePlay } from "react-icons/bi";
 import { MdInsertPhoto } from "react-icons/md";
 import PhotoGallery from "./PhotoGallery";
+import VideoDataComponent from "./VideoDataComponent";
+import { Suspense } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 
 
 export default function Gallery(){
   return (
     <div className="max_width mx-auto py-16 px-5">
-      <div className="flex flex-col items-center justify-center text-5xl font-[--font-playfair] tracking-widest italic font-bold">
+      <div className="flex flex-col items-center justify-center text-5xl playfair tracking-widest italic font-bold">
         <h2 className="text-5xl tracking-widest text-center">MY GALLERY</h2>
         <p className="text-lg"> - Performances & Photos - </p>
       </div>
@@ -31,9 +33,15 @@ export default function Gallery(){
         </TabsList>
 
         <TabsContent value="videos" className="w-full">
-          <div className="mt-5">
-            <VideoGallery />
-          </div>
+          <Suspense fallback={
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
+              <Skeleton className="rounded-xl h-[400px]"/>
+              <Skeleton className="rounded-xl h-[400px]" />
+              <Skeleton className="rounded-xl h-[400px]"/>
+            </div>
+          }>
+            <VideoDataComponent />
+          </Suspense>
         </TabsContent>
 
         <TabsContent value="photos" className="w-full">

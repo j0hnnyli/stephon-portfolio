@@ -16,3 +16,10 @@ export const allPhotos = [
   '/photos/photo13.jpg',
   '/photos/photo14.jpg',
 ]
+
+export const aboutPagePhotos = [
+  '/aboutpage/about1.jpg',
+  '/aboutpage/about2.jpg',
+  '/aboutpage/about3.jpg',
+  '/aboutpage/about4.jpg',
+]

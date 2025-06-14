@@ -6,10 +6,10 @@ export default async function FeaturedzVideos() {
 
   return (
     <section className="mb-10 max_width mx-auto px-5">
-      <h2 className="text-5xl font-[--font-playfair] text-center tracking-widest mb-10">
+      <h2 className="text-5xl playfair text-center tracking-widest mb-10">
         Featured Videos
       </h2>
-      
+
       <FeaturedVideosContainer featuredVideos={resources}/>
     </section>
   )

@@ -7,7 +7,7 @@ type Props = {
 export default function PhotoCard({ src } : Props){
   return (
     <div 
-      className="relative rounded overflow-hidden w-full h-[400px] cursor-pointer"
+      className="relative rounded-xl overflow-hidden w-full h-[400px] cursor-pointer"
     >
       <Image
         src={src}
