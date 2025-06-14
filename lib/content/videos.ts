@@ -11,3 +11,4 @@ export const allVideos = [
   'https://youtube.com/shorts/uUcJxSMqR0o',
   'https://youtu.be/oAnl7sr2xDM',
 ]
+

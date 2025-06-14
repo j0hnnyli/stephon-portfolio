@@ -11,7 +11,6 @@ type TrackPlayerProps = {
   url: string;
   title: string;
 };
-
 let currentAudio: HTMLAudioElement | null = null;
 
 const formatTime = (durSecs: number) => {

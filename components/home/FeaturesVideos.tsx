@@ -9,7 +9,7 @@ export default async function FeaturedzVideos() {
       <h2 className="text-5xl playfair text-center tracking-widest mb-10">
         Featured Videos
       </h2>
-    
+
       <FeaturedVideosContainer featuredVideos={resources}/>
     </section>
   )

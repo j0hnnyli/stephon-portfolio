@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import MediaNavbar from "@/components/MediaNavbar";
 import localFont from "next/font/local";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
