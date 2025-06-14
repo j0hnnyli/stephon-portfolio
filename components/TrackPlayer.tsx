@@ -50,13 +50,13 @@ export default function TrackPlayer({ url, title }: TrackPlayerProps) {
 
   return (
     <div className="flex gap-2 mx-auto ">
-      <div className="relative w-[75px] h-[75px]">
+      <div className="relative w-[75px] h-[75px] overflow-hidden rounded-xl">
         <Image
           src="/trackcover.jpg"
           alt="track cover"
           fill
           sizes="75"
-          className="object-cover rounded-xl z-10"
+          className="object-cover z-10"
         />
         {isPlaying && currentAudio === audioRef.current && <AnimateBars />}
       </div>
