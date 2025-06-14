@@ -35,9 +35,9 @@ export default function FeaturedVideosContainer({featuredVideos} : Props) {
               key={asset_id}
               className={twMerge(
                 "absolute transition-all duration-300  ease-in-out h-auto w-full md:w-[500px]",
-                isActive && "z-30 scale-110",
-                isPrev && "-translate-x-[280px] z-20 scale-90 -rotate-6",
-                isNext && "translate-x-[280px] z-20 scale-90 rotate-6"
+                isActive && "z-20",
+                isPrev && "-translate-x-[280px] z-10 scale-90 -rotate-6",
+                isNext && "translate-x-[280px] z-10 scale-90 rotate-6"
               )}
             >
               <video

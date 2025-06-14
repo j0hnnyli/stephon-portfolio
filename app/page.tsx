@@ -11,11 +11,11 @@ export default function Home() {
       <Intro />
       <AboutSection />
       
-      <Suspense fallback={<Skeleton className="h-[500px] rounded-xl max_width mx-auto my-5"/>}>
+      <Suspense fallback={<Skeleton className="bg-gray-500 h-[500px] rounded-xl max_width mx-auto my-5"/>}>
         <FeaturedzVideos />
       </Suspense>
 
-      <Suspense fallback={<Skeleton className="h-56 rounded-xl max_width mx-auto my-5"/>}>
+      <Suspense fallback={<Skeleton className="bg-gray-500 h-56 rounded-xl max_width mx-auto my-5"/>}>
         <BounsLiveTracks />
       </Suspense>
     </>
