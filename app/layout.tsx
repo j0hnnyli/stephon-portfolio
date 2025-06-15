@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import MediaNavbar from "@/components/MediaNavbar";
+import MediaNavbar from "@/components/media/MediaNavbar";
 import localFont from "next/font/local";
 
 

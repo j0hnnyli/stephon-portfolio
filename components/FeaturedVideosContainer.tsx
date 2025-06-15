@@ -4,9 +4,10 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import { twMerge } from 'tailwind-merge'
-import { CgChevronRight } from "react-icons/cg";
+import { CgChevronRight } from "react-icons/cg"
 import { getCloudinaryPosterUrl } from '@/lib/utils'
 import { VideoType } from '@/lib/types/videoType'
+import { motion } from 'framer-motion'
 
 type Props = {
   featuredVideos: VideoType[];
@@ -22,7 +23,7 @@ export default function FeaturedVideosContainer({featuredVideos} : Props) {
 
   return (
     <>
-      <div className="relative w-full h-[250px] md:h-[300px] flex justify-center items-center overflow-hidden">
+      <div className="relative w-full h-[250px] md:h-[300px] flex justify-center items-center overflow-hidden mt-10">
         {featuredVideos.map(({asset_id, url, public_id}, i) => {
           const isActive = i === active
           const isPrev = i === active - 1
@@ -31,24 +32,30 @@ export default function FeaturedVideosContainer({featuredVideos} : Props) {
           if (!isActive && !isPrev && !isNext) return null
 
           return (
-            <div
+            <motion.div
               key={asset_id}
+              initial={{ rotate: 0 }}
+              whileInView={{ rotate: isActive ? 0 : isPrev ? -6 : 6 }}
+              transition={{ duration : 0.4, }}
+              viewport={{ amount: 0.2, once: true }}
               className={twMerge(
                 "absolute transition-all duration-300  ease-in-out h-auto w-full md:w-[500px]",
                 isActive && "z-20",
-                isPrev && "-translate-x-[280px] z-10 scale-90 -rotate-6",
-                isNext && "translate-x-[280px] z-10 scale-90 rotate-6"
+                isPrev && "-translate-x-[280px] z-10 scale-90",
+                isNext && "translate-x-[280px] z-10 scale-90"
               )}
             >
               <video
                 src={url}
                 controls={isActive}
                 playsInline
+                aria-hidden={!isActive}
+                muted={!isActive}
                 poster={getCloudinaryPosterUrl(public_id)}
                 preload="metadata"
                 className="w-full h-full object-cover mx-auto"
               />
-            </div>
+            </motion.div>
           )
         })}
       </div>

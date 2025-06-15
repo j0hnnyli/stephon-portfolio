@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaMicrophoneLines } from "react-icons/fa6";
+import { navLinks } from "@/lib/content/navLinks";
 
 
 export default function Navbar(){
@@ -14,10 +15,14 @@ export default function Navbar(){
         </div>
 
         <div className="flex items-center justify-center gap-5">
-          <Link href='/'> Home </Link>
-          <Link href='/about'> About </Link>
-          <Link href='/gallery'> Gallery </Link>
-          <Link href='/contact'> Contact </Link>
+          {navLinks.map(({label, href}) => (
+            <Link key={label} href={href}
+              className="group relative"
+            > 
+              {label} 
+              <span className="absolute left-0 bottom-[-1px] h-[1px] w-full scale-x-0 bg-white origin-left group-hover:scale-x-100 rounded-xl transition-all duration-300 ease-in-out"/>
+            </Link>
+          ))}
         </div>
       </div>
     </nav>

@@ -5,6 +5,7 @@ import PhotoGallery from "./PhotoGallery";
 import VideoDataComponent from "./VideoDataComponent";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
+import AnimateTitle from "@/components/animate/AnimateTitle";
 
 
 
@@ -12,8 +13,12 @@ export default function Gallery(){
   return (
     <div className="max_width mx-auto py-16 px-5">
       <div className="flex flex-col items-center justify-center text-5xl playfair tracking-widest italic font-bold">
-        <h2 className="text-5xl tracking-widest text-center">MY GALLERY</h2>
-        <p className="text-lg"> - Performances & Photos - </p>
+        <AnimateTitle>
+          <h2 className="text-5xl tracking-widest text-center">MY GALLERY</h2>
+        </AnimateTitle>
+        <AnimateTitle>
+          <p className="text-lg"> - Performances & Photos - </p>
+        </AnimateTitle>
       </div>
 
       <Tabs defaultValue="videos" className="w-full flex justify-center items-center mt-10  bg-transparent">
