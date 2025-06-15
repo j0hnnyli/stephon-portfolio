@@ -29,7 +29,7 @@ export default function Intro() {
             <h2 className="leading-tight">JONES</h2>
           </AnimateText>
           <AnimateText>
-            <p className="text-lg"> - Singer & Entertainer - </p>
+            <p className="text-lg">Singer & Entertainer</p>
           </AnimateText>
         </div>
       </div>

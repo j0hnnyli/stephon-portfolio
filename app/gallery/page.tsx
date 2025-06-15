@@ -17,7 +17,7 @@ export default function Gallery(){
           <h2 className="text-5xl tracking-widest text-center">MY GALLERY</h2>
         </AnimateTitle>
         <AnimateTitle>
-          <p className="text-lg"> - Performances & Photos - </p>
+          <p className="text-lg">Performances & Photos</p>
         </AnimateTitle>
       </div>
 
