@@ -12,7 +12,7 @@ export default function ContactPage() {
           <h2>Contact Me</h2>
         </AnimateTitle>
         <AnimateTitle>
-          <p className="text-lg">- Timeless & Pure -</p>
+          <p className="text-lg">Timeless & Pure</p>
         </AnimateTitle>
       </div>
 
