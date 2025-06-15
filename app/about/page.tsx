@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { allPhotos } from '@/lib/content/photos'
+import AnimateTitle from "@/components/animate/AnimateTitle";
 
 function create2dArray(array : string[]){
   const res : string[][] = [];
@@ -39,15 +40,22 @@ export default function AboutPage() {
             />
           </div>
           <div className="text-center">
-            <h2 className="text-2xl">Stephon Jones</h2>
-            <p>Singer & Entertainer</p>
-            <p>New York, NY</p>
+            <AnimateTitle>
+              <h2 className="text-2xl">Stephon Jones</h2>
+            </AnimateTitle>
+            <AnimateTitle>
+              <p>Singer & Entertainer</p>
+            </AnimateTitle>
+            <AnimateTitle>
+              <p>New York, NY</p>
+            </AnimateTitle>
           </div>
         </section>
 
         <section className="mt-10 text-center">
-          <h2 className="text-5xl playfair tracking-widest">Behind the Mic</h2>
-
+          <AnimateTitle>
+            <h2 className="text-5xl playfair tracking-widest">Behind the Mic</h2>
+          </AnimateTitle>
           <p className="mt-10 text-lg md:w-[50%] mx-auto">
             I&apos;m a singer and entertainer with a deep passion for performing that began in church and choir. At nine years old, I had the opportunity to sing in front of 25,000 people, a moment that confirmed, this is who I am!  Since then, I&apos;ve performed at various venues and toured as The Drifters, JT Taylor of Kool & the Gang, and performed in musicals like Hair and Grease. Whether on stage or in the studio, I bring timeless, soulful energy.
           </p>

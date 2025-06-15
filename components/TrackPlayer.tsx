@@ -6,6 +6,34 @@ import { VscDebugRestart } from "react-icons/vsc";
 import { ChangeEvent } from "react";
 import { AnimateBars } from "./AnimateBars";
 import { useAudioPlayer } from "@/lib/hooks/useAudioPlayer";
+import { motion } from 'framer-motion'
+import { TrackProps } from "@/lib/types/trackType";
+import { fadeIn, staggerContainer } from "@/lib/motion";
+
+type TrackPlayerContainerProps = {
+  tracks : TrackProps[]
+}
+
+export default function TrackPlayerContainer( {tracks} : TrackPlayerContainerProps){
+  return (
+    <motion.div 
+      variants={staggerContainer(0.2, 0.2)}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: true, amount: 0.2 }}
+      className="grid grid-cols-1 md:grid-cols-2 justify-center gap-5 mt-10 overflow-hidden"
+    >
+      {tracks.map(({ url, asset_id, context }) => (
+        <motion.div 
+          variants={fadeIn('left', 'spring', 0.4)}
+          key={asset_id}
+        >
+          <TrackPlayer title={context.caption} url={url} />
+        </motion.div>
+      ))}
+    </motion.div>
+  )
+}
 
 type TrackPlayerProps = {
   url: string;
@@ -19,7 +47,7 @@ const formatTime = (durSecs: number) => {
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 };
 
-export default function TrackPlayer({ url, title }: TrackPlayerProps) {
+function TrackPlayer({ url, title }: TrackPlayerProps) {
   const {
     audioRef,
     isPlaying,
@@ -102,3 +130,6 @@ export default function TrackPlayer({ url, title }: TrackPlayerProps) {
     </div>
   );
 }
+
+
+
